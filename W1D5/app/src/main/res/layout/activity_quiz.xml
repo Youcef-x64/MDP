@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/tv_mark_q1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Q1:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_q1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="What is kotlin?"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_mark_q1"
+        app:layout_constraintStart_toEndOf="@id/tv_mark_q1" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/tv_mark_q1"
+        app:layout_constraintTop_toBottomOf="@id/tv_mark_q1">
+
+        <RadioButton
+            android:id="@+id/rb_choose_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programming language" />
+
+        <RadioButton
+            android:id="@+id/rb_choose_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feature in kotlin" />
+
+        <RadioButton
+            android:id="@+id/rb_choose_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Database type" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_mark_q2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Q2:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg" />
+
+    <TextView
+        android:id="@+id/tv_q3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="What is the different types of intent?"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_mark_q2"
+        app:layout_constraintStart_toEndOf="@id/tv_mark_q2" />
+
+    <CheckBox
+        android:id="@+id/cb_choose_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Implicit Intent"
+        app:layout_constraintStart_toStartOf="@id/tv_mark_q2"
+        app:layout_constraintTop_toBottomOf="@id/tv_mark_q2" />
+
+    <CheckBox
+        android:id="@+id/cb_choose_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explicit Intent"
+        app:layout_constraintStart_toStartOf="@id/cb_choose_1"
+        app:layout_constraintTop_toBottomOf="@id/cb_choose_1" />
+
+    <CheckBox
+        android:id="@+id/cb_choose_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="None of the above"
+        app:layout_constraintStart_toStartOf="@id/cb_choose_2"
+        app:layout_constraintTop_toBottomOf="@id/cb_choose_2" />
+
+    <Button
+        android:id="@+id/b_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b_reset"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/b_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_submit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
